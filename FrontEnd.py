@@ -7,7 +7,7 @@ import requests
 st.title("Movie Recommendation System")
 
 def fetch_poster(movie_id):
-    url = "https://api.themoviedb.org/3/movie/{}?api_key=d3c2c26702068f04099bc8791b476be5&language=en-US".format(movie_id)
+    url = "https://api.themoviedb.org/3/movie/{}?api_key={api key}&language=en-US".format(movie_id)
     response = requests.get(url)
     data = response.json()
     poster_path = data['poster_path']
